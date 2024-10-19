@@ -4,20 +4,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gdesigner</title>
+    <title>gdesigner:Home</title>
     <style>
         body{
-            background-image: linear-gradient(to left, red, green);
-            height:400px;
+            background-image: linear-gradient(to left, salmon,chartreuse );
             font-family: Calibri, Arial, Helvetica, sans-serif;
         }
-    
+        .self-image{
+            margin-right: 10px;
+            width:150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .intro{
+            display:flex;
+            margin-top: 50px;
+        }
+        .header{
+            display:flex;
+            justify-content: space-between;
+        }
+        .navbar{
+            margin: 10px;
+        }
+        .dropbtn {
+            
+            background-color: brown;
+            color:black;
+            padding: 20px 20px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: peru;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: hidden;
+    }
+
+    .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: rgb(205, 112, 112);}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: gainsboro;}
+        
     </style>
 </head>
 <body>
-    <h1>gdesigner : Home</h1>
-    <p>Hi! I'm Finn. This is where I put my creations!</p>
-    <p></p>
+    <div class="header">
+        <h1>gdesigner : Home</h1>
+        <div class="navbar">
+        <!-- <button class="dropbtn">Menu</button> -->
+        <!-- <div class="dropdown-content"> -->
+          <!-- <a href="langs.html">Languages</a> -->
+        <div class="dropdown">
+            <button class="dropbtn">Menu</button>
+            <div class="dropdown-content">
+                <a href="#">Videos</a>
+                <a href="#">Photos</a>
+                <a href="#">Coding Projects</a>
+                <a href="#">Comics</a>
+                <a href="#">Manuscripts</a>
+            </div>
+        </div>
+        <!-- </div> -->
+        </div>
+    </div>
+    <div class="intro">
+
+    <img class="self-image" src="img/BioPic.jpg" >
+
+    <div class="intro-text">
+    <h2>Hi! I'm Finn. This is where I put my creations!</h2>
+    <!-- <p>Nǐ hǎo! Wǒ shì Finn. Zhè shì wǒ de zuòpǐn de cúnfàng de!</p> -->
+    </div>
+ 
+</div>
 </body>
 </html>
 
