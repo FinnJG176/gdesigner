@@ -1,1 +1,0 @@
-print("I am going to tell you about a website I built used to learn German and Spanish! I hope to get a URL for it soon.")
