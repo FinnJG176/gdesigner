@@ -6,32 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gdesigner:Videos</title>
     <style>
-        body{
-            background-image: linear-gradient(to left, salmon,chartreuse );
+        body {
+            background-image: linear-gradient(to left, salmon, chartreuse);
             font-family: Calibri, Arial, Helvetica, sans-serif;
         }
-    
 
-        .mainlogotitle{
+
+        .mainlogotitle {
             display: flex;
             margin-top: 50px;
         }
-        .header{
-            display:flex;
+
+        .header {
+            display: flex;
             justify-content: space-between;
-            margin:auto;
+            margin: auto;
         }
-        .logodisplay{
+
+        .logodisplay {
             width: 75px;
             height: 75px;
         }
-        .navbar{
+
+        .navbar {
             margin: 10px;
         }
+
         .dropbtn {
-            
+
             background-color: chartreuse;
-            color:black;
+            color: black;
             padding: 20px 20px;
             font-size: 16px;
             border: none;
@@ -47,10 +51,10 @@
             position: absolute;
             background-color: peru;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
             overflow: hidden;
-            right:0;
+            right: 0;
         }
 
         .dropdown-content a {
@@ -61,38 +65,57 @@
         }
 
         /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {background-color: rgb(205, 112, 112);}
+        .dropdown-content a:hover {
+            background-color: rgb(205, 112, 112);
+        }
 
         /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
         /* Change the background color of the dropdown button when the dropdown content is shown */
-        .dropdown:hover .dropbtn {background-color: gainsboro;}
-        
-        .carousel{
+        .dropdown:hover .dropbtn {
+            background-color: gainsboro;
+        }
+
+        .carousel {
             position: relative;
-            overflow:hidden;
-
+            overflow: hidden;
+            margin: auto;
+            justify-content: center;
         }
-        .carousel-photos{
+
+        .carousel-photos {
             display: flex;
+            gap: 20px;
         }
 
-        .carousel img{
+        .carousel img {
             display: block;
             height: 300px;
         }
 
-        button.left-button, button.right-button {
+        button.left-button,
+        button.right-button {
             top: 50%;
             position: absolute;
-            background-color: rgba(0,0,0,0);
+            cursor: pointer;
+            width: auto;
+
         }
+        button.right-button{
+            right: 0;
+        }
+        .left-button img,
+        .right-button img {
+            width: 30px;
+            height: 30px;
 
-
-
+        }
     </style>
 </head>
+
 <body>
     <div class="header">
         <a href="index.html"><img class="logodisplay" src="img/HomeIcon.png"></img></a>
@@ -108,19 +131,33 @@
             </div>
         </div>
     </div>
-    <div>
-        <div class = "carousel">
-            <button class="left-button"></button>
-            <div class="carousel-photos">
-            <img src="img/BioPic.jpg"></img>
-            <img src="img/BioPic.jpg"></img>
-            <img src="img/BioPic.jpg"></img>
-        </div>
-            <button class="right-button"></button>
 
+    <div class="carousel">
+
+        <button class="right-button">
+            <img src="img/rightbutton.png"></img>
+        </button>
+        <div class="carousel-photos">
+            <img src="img/BioPic.jpg"></img>
+            <img src="img/BioPic.jpg"></img>
+            <img src="img/BioPic.jpg"></img>
+            <img src="img/BioPic.jpg"></img>
         </div>
-    </div> 
-</div>
+        <button class="left-button">
+            <img src="img/leftbutton.png"></img>
+        </button>
+
+    </div>
+    </div>
+<script>
+    const rightButton = document.getElementsByClassName('right-button')
+    const list = document.getElementsByClassName('carousel-photos')
+    const itemWidth = 450
+    const gap = 20
+
+    rightButton.addEventListener('click', () => {
+        list.scrollLeft += (itemWidth + gap)
+    })
+</script>
 </body>
 </html>
-
