@@ -89,6 +89,22 @@
         .carousel-photos {
             display: flex;
             gap: 20px;
+            animation-duration: 3s;
+            animation-name: slide-in;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes slide-in {
+            from {
+                translate: 150vw 0;
+                scale: 200% 1;
+            }
+
+            to {
+                translate: 0 0;
+                scale: 100% 1;
+            }
         }
 
         .carousel img {
@@ -138,10 +154,10 @@
             <img src="img/rightbutton.png"></img>
         </button>
         <div class="carousel-photos">
-            <img src="img/BioPic.jpg"></img>
-            <img src="img/BioPic.jpg"></img>
-            <img src="img/xmas.webp"></img>
-            <img src="img/BioPic.jpg"></img>
+            <img src="photos/pic1.jpeg"></img>
+            <img src="photos/pic2.jpeg"></img>
+            <img src="photos/pic3.jpeg"></img>
+            <img src="photos/pic4.jpeg"></img>
         </div>
         <button class="left-button">
             <img src="img/leftbutton.png"></img>
@@ -149,6 +165,8 @@
 
     </div>
     </div>
+
+
 <script>
     const rightButton = document.getElementsByClassName('right-button')
     const list = document.getElementsByClassName('carousel-photos')
@@ -156,7 +174,8 @@
     const gap = 20
 
     rightButton.addEventListener('click', () => {
-        list.scrollLeft += (itemWidth + gap)
+        list.
+        // list.scrollLeft += (itemWidth + gap)
     })
 </script>
 </body>
