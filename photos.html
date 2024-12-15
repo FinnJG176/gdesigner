@@ -4,132 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gdesigner:Videos</title>
-    <style>
-        body {
-            background-image: linear-gradient(to left, rgb(220,61,42), rgb(0,179,44));
-            font-family: Calibri, Arial, Helvetica, sans-serif;
-        }
-
-
-        .mainlogotitle {
-            display: flex;
-            margin-top: 50px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            margin: auto;
-        }
-
-        .logodisplay {
-            width: 75px;
-            height: 75px;
-        }
-
-        .navbar {
-            margin: 10px;
-        }
-
-        .dropbtn {
-
-            background-image: linear-gradient(to left, rgb(220,61,42), rgb(0,179,44));
-            color: black;
-            padding: 20px 20px;
-            font-size: 16px;
-            border: none;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: yellowgreen;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            overflow: hidden;
-            right: 0;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block
-        }
-
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: rgb(205, 112, 112);
-        }
-
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Change the background color of the dropdown button when the dropdown content is shown */
-        .dropdown:hover .dropbtn {
-            background-color: gainsboro;
-        }
-
-        .carousel {
-            position: relative;
-            overflow: hidden;
-            margin: auto;
-            justify-content: center;
-        }
-
-        .carousel-photos {
-            display: flex;
-            gap: 20px;
-            animation-duration: 3s;
-            animation-name: slide-in;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-        }
-
-        @keyframes slide-in {
-            from {
-                translate: 150vw 0;
-                scale: 200% 1;
-            }
-
-            to {
-                translate: 0 0;
-                scale: 100% 1;
-            }
-        }
-
-        .carousel img {
-            display: block;
-            height: 300px;
-        }
-
-        button.left-button,
-        button.right-button {
-            top: 50%;
-            position: absolute;
-            cursor: pointer;
-            width: auto;
-
-        }
-        button.right-button{
-            right: 0;
-        }
-        .left-button img,
-        .right-button img {
-            width: 30px;
-            height: 30px;
-
-        }
-    </style>
+    <title>gdesigner:Photos</title>
+    <link rel="stylesheet" href="photos.css"></link>
+    <script src="photos.js" defer></script>
 </head>
 
 <body>
@@ -144,30 +21,38 @@
                 <a href="cprojs.html">Coding Projects</a>
                 <a href="comics.html">Comics</a>
                 <a href="manuscripts.html">Manuscripts</a>
+                <a href="tkdfeats1.html">TKD Feats: White-Orange</a>
             </div>
         </div>
     </div>
 
-    <div class="carousel">
-
-        <button class="right-button">
-            <img src="img/rightbutton.png"></img>
-        </button>
-        <div class="carousel-photos">
-            <img src="photos/pic1.jpeg"></img>
-            <img src="photos/pic2.jpeg"></img>
-            <img src="photos/pic3.jpeg"></img>
-            <img src="photos/pic4.jpeg"></img>
-        </div>
-        <button class="left-button">
+    <div class="carousel" data-carousel>
+        <button class="left-button" data-carousel-button="prev">
             <img src="img/leftbutton.png"></img>
         </button>
 
-    </div>
+        <button class="right-button" data-carousel-button="next">
+            <img src="img/rightbutton.png"></img>
+        </button>
+        <ul data-slides>
+            <li class="slide" data-active>
+                <img src="photos/pic1.jpeg"></img>
+            </li>
+            <li class="slide">
+                <img src="photos/pic2.jpeg"></img>
+            </li>
+            <li class="slide">
+                <img src="photos/pic3.jpeg"></img>
+            </li>
+            <li class="slide">
+                <img src="photos/pic4.jpeg"></img>
+            </li>
+        </ul>
+
     </div>
 
 
-<script>
+<!-- <script>
     const rightButton = document.getElementsByClassName('right-button')
     const list = document.getElementsByClassName('carousel-photos')
     const itemWidth = 450
@@ -177,6 +62,6 @@
         list.
         // list.scrollLeft += (itemWidth + gap)
     })
-</script>
+</script> -->
 </body>
 </html>

@@ -1,0 +1,157 @@
+body {
+    background-image: linear-gradient(to left, rgb(220,61,42), rgb(0,179,44));
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.mainlogotitle {
+    display: flex;
+    margin-top: 50px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.logodisplay {
+    width: 75px;
+    height: 75px;
+}
+
+.navbar {
+    margin: 10px;
+}
+
+.dropbtn {
+
+    background-image: linear-gradient(to left, rgb(220,61,42), rgb(0,179,44));
+    color: black;
+    padding: 20px 20px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: yellowgreen;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    overflow: hidden;
+    right: 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(205, 112, 112);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: gainsboro;
+}
+
+.carousel {
+    width:100vw;
+    height:100vh;
+    position: relative;
+    
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+}
+
+.slide img {
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+
+}
+
+.slide[data-active]{
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+/* @keyframes slide-in {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    } */
+/* } */
+
+.carousel img {
+    display: block;
+    height: 500px;
+}
+.carousel ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+button.left-button,
+button.right-button {
+    background: none;
+    top: 25%;
+    position: absolute;
+    cursor: pointer;
+    border: none;
+    width: auto;
+    z-index: 2;
+    padding: 0;
+    opacity: 0.5
+}
+
+button.left-button:hover,
+button.right-button:hover,
+button.right-button:focus,
+button.left-button:focus{
+    opacity: 1
+}
+
+button.right-button{
+    right: 0.5rem;
+}
+button.left-button{
+    left: 0.5rem;
+}
+.left-button img,
+.right-button img {
+    width: 30px;
+    height: 30px;
+
+}
