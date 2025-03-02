@@ -5,33 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gdesigner:GoGuesser</title>
-    <script href="goguesser.js"></script>
+
     <style>
-        body{
+        body {
             background-image: linear-gradient(to left, salmon, chartreuse);
             font-family: Calibri, Arial, Helvetica, sans-serif;
         }
-    
-        .mainlogotitle{
+
+        .mainlogotitle {
             display: flex;
             margin-top: 50px;
         }
-        .header{
-            display:flex;
+
+        .header {
+            display: flex;
             justify-content: space-between;
-            margin:auto;
+            margin: auto;
         }
-        .logodisplay{
+
+        .logodisplay {
             width: 75px;
             height: 75px;
         }
-        .navbar{
+
+        .navbar {
             margin: 10px;
         }
-         .dropbtn {
-            
+
+        .dropbtn {
+
             background-color: chartreuse;
-            color:black;
+            color: black;
             padding: 20px 20px;
             font-size: 16px;
             border: none;
@@ -47,10 +51,10 @@
             position: absolute;
             background-color: peru;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
             overflow: hidden;
-            right:0;
+            right: 0;
         }
 
         .dropdown-content a {
@@ -60,21 +64,25 @@
             display: block
         }
 
-        .dropdown-content a:hover {background-color: rgb(205, 112, 112);}
+        .dropdown-content a:hover {
+            background-color: rgb(205, 112, 112);
+        }
 
         /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
         /* Change the background color of the dropdown button when the dropdown content is shown */
-        .dropdown:hover .dropbtn {background-color: gainsboro;}
-        
+        .dropdown:hover .dropbtn {
+            background-color: gainsboro;
+        }
     </style>
 </head>
+
 <body>
     <div class="header">
-        <a href="index.html"><img class="logodisplay" src="img/HomeIcon.png"></img></a> 
-
-
+        <a href="index.html"><img class="logodisplay" src="img/HomeIcon.png"></img></a>
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
             <div class="dropdown-content">
@@ -88,12 +96,17 @@
         </div>
     </div>
     <h1>GoGuesser</h1>
-    <p>This is a number guessing game that I created. Another version can be found at <a href="https://replit.com/@FinnJG/GoGuesser-The-number-guessing-game">this link</a>.</p>
-    <p>gogυᥱssᥱr ιs ᥴυrrᥱᥒtᥣყ υᥒᥲvᥲιᥣᥲbᥣᥱ ᥲs ιt ιs ᥲ bᥱtᥲ ᥴoᥒᥴᥱρt. wᥱ ᥲρoᥣogιzᥱ for thᥱ ιᥒᥴoᥒvᥱᥒιᥱᥒᥴᥱ.</p>
-    <!-- <p>Guess the Number (1-100):</p>
-    <input type="number">
-    <button>Submit</button> -->
-</div>
-</body>
-</html>
+    <p>This is a number guessing game that I created. Another version can be found at <a
+            href="https://replit.com/@FinnJG/GoGuesser-The-number-guessing-game">this link</a>.</p>
+    <!-- <p>gogυᥱssᥱr ιs ᥴυrrᥱᥒtᥣყ υᥒᥲvᥲιᥣᥲbᥣᥱ ᥲs ιt ιs ᥲ bᥱtᥲ ᥴoᥒᥴᥱρt. wᥱ ᥲρoᥣogιzᥱ for thᥱ ιᥒᥴoᥒvᥱᥒιᥱᥒᥴᥱ.</p> -->
+    <div>
+        <p>Guess the Number (1-100):</p>
+        <input id="guessInput" type="number" placeholder="Enter your guess...">
+        <button id="guessButton">Submit</button>
+        <p id="feedback"></p>
+    </div>
+    <script src="goguesser.js"></script>
 
+</body>
+
+</html>
