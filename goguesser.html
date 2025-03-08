@@ -97,15 +97,25 @@
     </div>
     <h1>GoGuesser</h1>
     <p>This is a number guessing game that I created. Another version can be found at <a
-            href="https://replit.com/@FinnJG/GoGuesser-The-number-guessing-game">this link</a>.</p>
-    <p>gogυᥱssᥱr ιs ᥴυrrᥱᥒtᥣყ υᥒᥲvᥲιᥣᥲbᥣᥱ ᥲs ιt ιs ᥲ bᥱtᥲ ᥴoᥒᥴᥱρt. wᥱ ᥲρoᥣogιzᥱ for thᥱ ιᥒᥴoᥒvᥱᥒιᥱᥒᥴᥱ.</p>
-    <P>𝕎𝕖 𝕒𝕣𝕖 𝕨𝕠𝕣𝕜𝕚𝕟𝕘 𝕠𝕟 𝕟𝕖𝕨 𝕝𝕖𝕧𝕖𝕝𝕤.</P>
+            <!-- href="https://replit.com/@FinnJG/GoGuesser-The-number-guessing-game">this link</a>.</p>
+    <!-- <p>gogυᥱssᥱr ιs ᥴυrrᥱᥒtᥣყ υᥒᥲvᥲιᥣᥲbᥣᥱ ᥲs ιt ιs ᥲ bᥱtᥲ ᥴoᥒᥴᥱρt. wᥱ ᥲρoᥣogιzᥱ for thᥱ ιᥒᥴoᥒvᥱᥒιᥱᥒᥴᥱ.</p> -->
+    <P>𝕎𝕖 𝕒𝕣𝕖 𝕨𝕠𝕣𝕜𝕚𝕟𝕘 𝕠𝕟 𝕟𝕖𝕨 𝕝𝕖𝕧𝕖𝕝𝕤.</p>
+    <label for="difficulty">Choose a difficulty:</label>
+    <select name="difficulty" id="difficulty">
+        <option value="easiest">Easiest (1-10, ∞ tries)</option>
+        <option value="easy">Easy (1-50, 15 tries)</option>
+        <option value="medium">Medium (1-100, 10 tries)</option>
+        <option value="hard">Hard (1-500, 7 tries)</option>
+        <option value="expert">Expert (1-1000, 5 tries)</option>
+        <option value="impossible">Nearly Impossible (1-2000, 2 tries)</option>
+    </select>
+      
     <div>
-        <!-- <p>Guess the Number (1-100):</p>
+        <p>Guess the Number (1-100):</p>
         <input id="guessInput" type="number" placeholder="Enter your guess...">
         <button id="guessButton">Submit</button>
         <p id="feedback"></p>
-        <p id="level"></p> -->
+        <p id="level"></p>
     </div>
     <script src="goguesser.js"></script>
 
