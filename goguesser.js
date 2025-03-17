@@ -1,38 +1,55 @@
 
-
-const diffculty = document.getElementById("difficulty");
+const difficulty = document.getElementById("difficulty");
 const guessInput = document.getElementById("guessInput");
 const guessButton = document.getElementById("guessButton");
-const feedback = document.getElementById("feedback")
+const feedback = document.getElementById("feedback");
 const levelInput = document.getElementById("level");
 
 let maxNum = 10
 let randomNumber = Math.floor(Math.random() * maxNum) + 1
 
 function setDifficulty() {
-    if (difficulty.value === "easy") {
+    if (difficulty.value === "easiest") {
+        maxNum = 10;
+    }
+    else if (difficulty.value === "easy") {
         maxNum = 50;
     }
-    let randomNumber = Math.floor(Math.random() * maxNum) + 1
+    else if (difficulty.value === "inter") {
+        maxNum = 100;
+    }
+    else if (difficulty.value === "hard") {
+        maxNum = 500;
+    }
+    else if (difficulty.value === "expert") {
+        maxNum = 1000;
+    }
+    else if (difficulty.value === "impos") {
+        maxNum = 2000;
+    }
+    randomNumber = Math.floor(Math.random() * maxNum) + 1
+    feedback.textContent = "New difficulty selected"
+    feedback.style.color = "blue"
 }  
 
-diffculty.addEventListener('change', setDifficulty);
+difficulty.addEventListener('change', setDifficulty);
 
-guess.addEventListener("click", function () {
+guessButton.addEventListener("click", function () {
     let userguess = Number(guessInput.value);
     // let randomNumber = 50;
     console.log("userGuess, randomnumber", userguess, randomNumber)
-    if (userGuess > 100 || guessInput < 0) {
-        feedback.textContent = "Out of range! Make sure it's between 1 and 100."
+    if (userguess > maxNum || userguess < 0) {
+        feedback.textContent = "Out of range! Make sure it's between 1 and " + maxNum + "."
         feedback.style.color = "red";
-    } else if (userGuess > randomNumber) {
+    } else if (userguess > randomNumber) {
         feedback.textContent = "Too high!";
         feedback.style.color = "red";
-    } else if (userGuess < randomNumber) {
+    } else if (userguess < randomNumber) {
         feedback.textContent = "Too low!"
         feedback.style.color = "red";
     } else {
-        prompt("You got it correct! Would you like to advance to the next level (NXT) or play this one (1)?")
+        feedback.textContent = "Correct! Refresh or select a different difficulty to play again."
+        feedback.style.color = "green"
     }
 });
         // if (prompt = "NXT") {
