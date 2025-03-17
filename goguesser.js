@@ -4,6 +4,8 @@ const guessInput = document.getElementById("guessInput");
 const guessButton = document.getElementById("guessButton");
 const feedback = document.getElementById("feedback");
 const levelInput = document.getElementById("level");
+const kaChing = new Audio('snd/kaching.mp3');
+
 
 let maxNum = 10
 let randomNumber = Math.floor(Math.random() * maxNum) + 1
@@ -50,6 +52,7 @@ guessButton.addEventListener("click", function () {
     } else {
         feedback.textContent = "Correct! Refresh or select a different difficulty to play again."
         feedback.style.color = "green"
+        kaChing.play();
     }
 });
         // if (prompt = "NXT") {
