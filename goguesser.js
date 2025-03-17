@@ -5,10 +5,12 @@ const guessButton = document.getElementById("guessButton");
 const feedback = document.getElementById("feedback");
 const levelInput = document.getElementById("level");
 const kaChing = new Audio('snd/kaching.mp3');
-
+const tries = document.getElementById("tries")
 
 let maxNum = 10
 let randomNumber = Math.floor(Math.random() * maxNum) + 1
+let maxTry = 10
+let curTry = maxTry
 
 function setDifficulty() {
     if (difficulty.value === "easiest") {
@@ -16,18 +18,23 @@ function setDifficulty() {
     }
     else if (difficulty.value === "easy") {
         maxNum = 50;
+        maxTry = 15;
     }
     else if (difficulty.value === "inter") {
         maxNum = 100;
+        maxTry = 25;
     }
     else if (difficulty.value === "hard") {
         maxNum = 500;
+        maxTry = 30;
     }
     else if (difficulty.value === "expert") {
         maxNum = 1000;
+        maxTry = 50;
     }
     else if (difficulty.value === "impos") {
         maxNum = 2000;
+        maxTry = 55;
     }
     randomNumber = Math.floor(Math.random() * maxNum) + 1
     feedback.textContent = "New difficulty selected"
@@ -35,7 +42,6 @@ function setDifficulty() {
 }  
 
 difficulty.addEventListener('change', setDifficulty);
-
 guessButton.addEventListener("click", function () {
     let userguess = Number(guessInput.value);
     // let randomNumber = 50;
@@ -53,6 +59,15 @@ guessButton.addEventListener("click", function () {
         feedback.textContent = "Correct! Refresh or select a different difficulty to play again."
         feedback.style.color = "green"
         kaChing.play();
+    }
+    curTry -= 1
+    tries.textContent = (-(curTry - maxTry)) + " try/tries used up! " + curTry + " try/tries left!"
+    tries.style.color = "green"
+    if (curTry <= 3) {
+        tries.style.color = "red"
+    }
+    if (curTry === 0) {
+        tries.textContent = "Sorry, you didn't make it. Refresh to play again."
     }
 });
         // if (prompt = "NXT") {
