@@ -11,6 +11,7 @@ let maxNum = 10
 let randomNumber = Math.floor(Math.random() * maxNum) + 1
 let maxTry = 10
 let curTry = maxTry
+let userguess = 0
 
 function setDifficulty() {
     if (difficulty.value === "easiest") {
@@ -41,10 +42,8 @@ function setDifficulty() {
     feedback.style.color = "blue"
 }  
 
-difficulty.addEventListener('change', setDifficulty);
-guessButton.addEventListener("click", function () {
+function compareGuess() {
     let userguess = Number(guessInput.value);
-    // let randomNumber = 50;
     console.log("userGuess, randomnumber", userguess, randomNumber)
     if (userguess > maxNum || userguess < 0) {
         feedback.textContent = "Out of range! Make sure it's between 1 and " + maxNum + "."
@@ -56,9 +55,14 @@ guessButton.addEventListener("click", function () {
         feedback.textContent = "Too low!"
         feedback.style.color = "red";
     } else {
-        feedback.textContent = "Correct! Refresh or select a different difficulty to play again."
+        guessButton.disabled = true;
+        feedback.textContent = "Correct! Refreshing in 5 seconds"
         feedback.style.color = "green"
-        kaChing.play();
+        // kaChing.play();
+        //     setTimeout(function() {
+        //         location.reload(true)
+        //     }, 5000 );
+        // } 
     }
     curTry -= 1
     tries.textContent = (-(curTry - maxTry)) + " try/tries used up! " + curTry + " try/tries left!"
@@ -67,73 +71,24 @@ guessButton.addEventListener("click", function () {
         tries.style.color = "red"
     }
     if (curTry === 0) {
-        tries.textContent = "Sorry, you didn't make it. Refresh to play again."
+        guessButton.disabled = true;
+        tries.textContent = "Sorry, you didn't make it. Refreshing in 5 seconds"
+        setTimeout(function() {
+            location.reload(true)
+        }, 5000 );
     }
-});
-        // if (prompt = "NXT") {
-        //     levelInput.textContent = "You are now on Level 2 (1-1000)."
-        //     let randomNumber = Math.floor(Math.random() * 1000) + 1
-        //     if (userGuess > 100 || guessInput < 0) {
-        //         feedback.textContent = "Out of range! Make sure it's between 1 and 1000."
-        //         feedback.style.color = "red";
-        //    }
-        //     } else if (userGuess > randomNumber) {
-        //         feedback.textContent = "Too high!";
-        //         feedback.style.color = "red";
-        //     } else if (userGuess < randomNumber) {
-        //         feedback.textContent = "Too low!"
-        //         feedback.style.color = "red";
-        //     } else {
-        //         prompt("You got it correct! Would you like to go back to Level 1 (BCK) or play this one (STAY)?")
-        //         if (prompt = "BCK") {
-        //             levelInput.textContent = "Welcome back to level 1! Guess the number (1-100):"
-        //             if (userGuess > 100 || guessInput < 0) {
-        //                 feedback.textContent = "Out of range! Make sure it's between 1 and 100."
-        //                 feedback.style.color = "red";
-        //             } else if (userGuess > randomNumber) {
-        //                 feedback.textContent = "Too high!";
-        //                 feedback.style.color = "red";
-        //             } else if (userGuess < randomNumber) {
-        //                 feedback.textContent = "Too low!"
-        //                 feedback.style.color = "red";
-        //             } else {
-        //                 prompt("You got it correct! Would you like to advance to the next level (NXT) or play this one (1)?")
-        //         }
-        //     }
-        //     }
-        //         if (prompt = "STAY") {
-        //             let randomNumber = Math.floor(Math.random() * 1000) + 1
-        //             levelInput.textContent = "You're still on level 2 Guess the number (1-1000):"
-        //             if (userGuess > 100 || guessInput < 0) {
-        //                 feedback.textContent = "Out of range! Make sure it's between 1 and 1000."
-        //                 feedback.style.color = "red";
-        //             } else if (userGuess > randomNumber) {
-        //                 feedback.textContent = "Too high!";
-        //                 feedback.style.color = "red";
-        //             } else if (userGuess < randomNumber) {
-        //                 feedback.textContent = "Too low!"
-        //                 feedback.style.color = "red";
-        //             } else {
-        //                 prompt("You got it correct! Would you like to advance to the next level (NXT) or play this one (1)?")
-        //         }
-        //     }
-        // else if (prompt = "1") {
-        //     levelInput.textContent = "You are still on Level 1"
-        // }   let userGuess = Number(guessInput.value);
-        // // let randomNumber = 50;
-        // console.log("userGuess, randomnumber", userGuess, randomNumber)
-    
-        // if (userGuess > 100 || guessInput < 0) {
-        //     feedback.textContent = "Out of range! Make sure it's between 1 and 100."
-        //     feedback.style.color = "red";
-        // } else if (userGuess > randomNumber) {
-        //     feedback.textContent = "Too high!";
-        //     feedback.style.color = "red";
-        // } else if (userGuess < randomNumber) {
-        //     feedback.textContent = "Too low!"
-        //     feedback.style.color = "red";
-        // } else {
-        //     prompt("You got it correct! Would you like to advance to the next level (NXT) or play this one (1)?")
-        // feedback.style.color = "green";
-        
-        // }
+}
+
+
+difficulty.addEventListener('change', setDifficulty);
+guessButton.addEventListener('click', compareGuess);
+
+if (userguess === randomNumber || curTry === 0) {
+    guessButton.removeEventListener("click", compareGuess)
+} 
+// If we win or the guesses = 0, 
+// Turn off compareGuess
+// wait 5 seconds
+// refresh
+// EXEC
+
