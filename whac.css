@@ -1,0 +1,32 @@
+body{
+    background-image: linear-gradient(to left, salmon, chartreuse);
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    
+}
+
+h1 {
+    text-align: center;
+}
+.game {
+    margin: 20 auto;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 120px);
+    justify-content: center;
+}
+
+.hole {
+    width: 120px;
+    height: 120px;
+    background-color: brown;
+    border: 3px solid black;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    
+}
+.mainlogotitle{
+    display: flex;
+    margin-top: 50px;
+}
+
