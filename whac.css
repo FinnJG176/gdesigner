@@ -1,13 +1,22 @@
 body{
     background-image: linear-gradient(to left, salmon, chartreuse);
     font-family: Calibri, Arial, Helvetica, sans-serif;
-    
+}
+body.easterspecial {
+    background-image: url("img/eastereggs.jpg");
+}
+
+body.hp {
+    background-image: url("img/lightning-bolt.jpg");
+}
+body.skywalker {
+    background-image: url("img/tie-fighter.jpg");
 }
 
 h1 {
     text-align: center;
 }
-.game {
+#game {
     margin: 20 auto;
     display: grid;
     gap: 15px;
@@ -23,7 +32,6 @@ h1 {
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-    
 }
 .mainlogotitle{
     display: flex;
