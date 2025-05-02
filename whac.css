@@ -5,6 +5,7 @@ body{
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: url("img/pumpkin.png"), auto;
 }
 
 body.easterspecial {
@@ -96,6 +97,7 @@ h1 {
     gap: 15px;
     grid-template-columns: repeat(3, 120px);
     justify-content: center;
+    cursor: url("img/aerologo.png" ) auto;
 }
 
 .hole {

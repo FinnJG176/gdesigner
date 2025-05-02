@@ -3,13 +3,18 @@ const holes = document.querySelectorAll('.hole');
 const body = document.body;
 const start = document.getElementById("start");
 const timeText = document.getElementById("time");
+const score = document.getElementById("score");
+
 let timer;
 let moleTimer;
 let currentTime = 30;
-let score = 0;
+let currentScore = 0;
+
 function startGame() {
     currentTime = 30;
+    currentScore = 0;
     timeText.textContent = currentTime;
+    score.textContent = currentScore;
     
     clearInterval(timer);
     clearInterval(moleTimer);
@@ -38,7 +43,7 @@ function showMole() {
         const mole = document.createElement('div');
         // add it to our class list
         mole.classList.add('mole', 'show');
-        // add it to random hole 
+        // add it to random hole    
         randomhole.appendChild(mole);
 
         // set a timeout to remove the mole element after 
@@ -49,13 +54,16 @@ function showMole() {
 }
 // go through each hole
 holes.forEach(hole => {
-    hole.addEventListener('click', () => {
+    hole.addEventListener('click', (event) => {
     // check if the hole clicked on has show in the classlist
     // this means theres a mole in the hole
-        if (hole.classList.contains('show')) {
-            score ++ ;
-            // update score text
-            hole.classList.remove("show");
+        console.log("click")
+        const clicked = event.target;
+        if (clicked.classList.contains('mole')) {
+            currentScore++;
+            console.log("currentScore", currentScore)
+            score.textContent = currentScore;
+            clicked.remove()
         }
     })
 })
