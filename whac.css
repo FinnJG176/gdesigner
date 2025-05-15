@@ -10,19 +10,26 @@ body{
 
 body.easterspecial {
     background-image: url("img/eastereggs.jpg");
+    color: whitesmoke;
 }
 
 body.hp {
-    background-image: url("img/lightning-bolt.jpg");
+    background-image: url("img/hogwarts.jpg");
+    color: whitesmoke;
 }
 body.skywalker {
-    background-image: url("img/tie-fighter.jpg");
+    background-image: url("img/tie-fighter.jpeg");
+    background-position-x: 47%;
+    color: red;
 }
 body.lordmole {
     background-image: url("img/crown.avif");
+    background-position-x: ;
+
 }
 body.pixel {
-    background-image: url("img/pixelmole.png");
+    background-image: url("img/botw-pixel.png");
+
 }
 
 .header {
@@ -142,7 +149,7 @@ h1 {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     color: #fff;
     background-color: #28a745;
     border: none;
