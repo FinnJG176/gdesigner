@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gdesigner:Whac-a-Mole Video Game</title>
-    <link rel="stylesheet" href="whac.css"></link>
+    <link rel="stylesheet" href="whac.css">
+    </link>
 </head>
+
 <body>
     <div class="header">
-        <a href="index.html"><img class="logodisplay" src="img/HomeIcon.png"></img></a>
+        <mark id="logo"><a href="index.html"><img class="logodisplay" src="img/HomeIcon.png"></img></a></mark>
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
             <div class="dropdown-content">
@@ -29,40 +31,40 @@
 
     <h1>Whac-a-Mole</h1>
     <!-- <p>Guess what, ᗷETᗩ! Whac-a-Mole'll be back soon!</p> -->
-    <label for="theme" style="font-size: 20px">Choose a theme:</label>
-    <select name="theme" id="theme" style="font-size: 20px">
-        <option value="classic">Classic Whack</option>
-        <option value="hp">Harry Potter ᗷETᗩ</option>
-        <option value="skywalker">Luke Skywalker vs. Stormtroopers ᗷETᗩ</option>
-        <option value="easterspecial">Get the Easter Chocolates (𝐿𝒾𝓂𝒾𝓉𝑒𝒹 𝒯𝒾𝓂𝑒 𝒪𝓃𝓁𝓎!)</option>
-        <option value="lordmole">Lord Mole ᗷETᗩ</option>
-        <option value="pixel">Legends of Molda ᗷETᗩ</option>
-    </select>
-    <div id="game">
-        <div class="hole" id="hole1"></div>
-        <div class="hole" id="hole2"></div>
-        <div class="hole" id="hole3"></div>
-        <div class="hole" id="hole4"></div>
-        <div class="hole" id="hole5"></div>
-        <div class="hole" id="hole6"></div>
-        <div class="hole" id="hole7"></div>
-        <div class="hole" id="hole8"></div>
-        <div class="hole" id="hole9"></div>
+    <div class="central">
+        <label for="theme" style="font-size: 20px">Choose a theme:</label>
+        <select name="theme" id="theme" style="font-size: 20px">
+            <option value="classic">Classic Whack</option>
+            <option value="hp">Harry Potter ᗷETᗩ </option>
+            <option value="skywalker">Luke Skywalker vs. Stormtroopers ᗷETᗩ</option>
+            <option value="easterspecial">Get the Easter Chocolates (𝐿𝒾𝓂𝒾𝓉𝑒𝒹 𝒯𝒾𝓂𝑒 𝒪𝓃𝓁𝓎!)</option>
+            <option value="lordmole">Lord Mole ᗷETᗩ</option>
+            <option value="pixel">Legends of Molda ᗷETᗩ</option>
+        </select>
+        <div id="game">
+            <div class="hole" id="hole1"></div>
+            <div class="hole" id="hole2"></div>
+            <div class="hole" id="hole3"></div>
+            <div class="hole" id="hole4"></div>
+            <div class="hole" id="hole5"></div>
+            <div class="hole" id="hole6"></div>
+            <div class="hole" id="hole7"></div>
+            <div class="hole" id="hole8"></div>
+            <div class="hole" id="hole9"></div>
+        </div>
+        <button id="start">Start</button>
+        <div style="font-size: 20px">Score: <span id="score">0</span></div>
+        <div style="font-size: 20px"><mark>Time Remaning: <span id="time">30</span> seconds</mark></div>
     </div>
-    <div >
-    <button id="start">Start</button>
-    <div style="font-size: 20px">Score: <span id="score">0</span></div>
-    <div style="font-size: 20px">Time Remaning: <span id="time">30</span> seconds</div>
-    </div>  
     <!-- <p>Classic Whack - Exactly what it sounds like (unavailable)</p>
     <p>Harry Potter ᗷETᗩ - Defeat Voldemort (unavailable)</p>
     <p>Luke Skywalker vs. Stormtroopers ᗷETᗩ - Kill Darth Vader (unavailable)</p>
     <p>Get The Easter Chocolates - Kill baskets but leave chocolates (unavailable)</p>
     <p>Lord Mole ᗷETᗩ - Kill Lord Mole (unavailable)</p>
     <p>Legends of Molda ᗷETᗩ - 8-bit moles (unavailable)</p> -->
- 
-    <script src="whac.js"></script>
- 
-</body>
-</html>
 
+    <script src="whac.js"></script>
+
+</body>
+
+</html>

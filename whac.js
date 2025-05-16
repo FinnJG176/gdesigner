@@ -4,7 +4,7 @@ const body = document.body;
 const start = document.getElementById("start");
 const timeText = document.getElementById("time");
 const score = document.getElementById("score");
-
+const selectedMole = document.getElementById("selected-mole")
 let timer;
 let moleTimer;
 let currentTime = 30;
@@ -75,9 +75,10 @@ holes.forEach(hole => {
 
 themeSelector.addEventListener('change', (event)=> {
     const selectedTheme = event.target.value;
-
     body.classList.remove('lordmole','easterspecial', 'hp', 'skywalker','pixel' );
     body.classList.add(selectedTheme);
 });
+
+// moleSelector.addEventListener
 
 start.addEventListener('click', startGame)
