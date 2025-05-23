@@ -148,7 +148,19 @@ body.easterspecial .mole{
 body.easterspecial .hole{
     background-color: white;
 }
-
+body.hp .mole{
+    background-image: url("img/voldemort_crop.png");
+}
+body.skywalker .mole{
+    background-image: url("img/stormtrooper.png");
+    background-position-y: 1%;
+}
+body.pixel .mole{
+    background-image: url("img/botw-ganon.webp");
+}
+body.pixel .hole{
+    background-color: red;
+}
 .hole:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
