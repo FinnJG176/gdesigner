@@ -4,32 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gdesigner:Manuscripts</title>
+    <title>gdesigner:Poems</title>
+    <script src="poems.js" defer></script>
     <style>
-        body{
+        body {
             background-image: linear-gradient(to left, salmon, chartreuse);
             font-family: Calibri, Arial, Helvetica, sans-serif;
         }
-    
 
-        .mainlogotitle{
+
+        .mainlogotitle {
             display: flex;
             margin-top: 50px;
         }
-        .header{
-            display:flex;
+
+        .header {
+            display: flex;
             justify-content: space-between;
-            margin:auto;
+            margin: auto;
         }
-        .logodisplay{
+
+        .logodisplay {
             width: 75px;
             height: 75px;
         }
-        .navbar{
+
+        .navbar {
             margin: 10px;
         }
+
         .dropbtn {
-            
+
             background-color: chartreuse;
             color: black;
             padding: 20px 20px;
@@ -47,10 +52,10 @@
             position: absolute;
             background-color: peru;
             min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
             z-index: 1;
             overflow: hidden;
-            right:0;
+            right: 0;
         }
 
         .dropdown-content a {
@@ -61,21 +66,62 @@
         }
 
         /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {background-color: rgb(205, 112, 112);}
+        .dropdown-content a:hover {
+            background-color: rgb(205, 112, 112);
+        }
 
         /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
         /* Change the background color of the dropdown button when the dropdown content is shown */
-        .dropdown:hover .dropbtn {background-color: gainsboro;}
-        
+        .dropdown:hover .dropbtn {
+            background-color: gainsboro;
+        }
+        .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
     </style>
 </head>
+
 <body>
     <div class="header">
         <a href="index.html"><img class="logodisplay" src="img/HomeIcon.png"></img></a>
-
-
         <div class="dropdown">
             <button class="dropbtn">Menu</button>
             <div class="dropdown-content">
@@ -87,52 +133,59 @@
                 <a href="aero.html">Aeronautics ᗷETᗩ</a>
                 <a href="whac.html">Whac-a-Mole ᗷETᗩ</a>
                 <a href="hp2.html">Hand Picked Produce</a>
+                <a href="contact.html">Contact Us 𝒩𝑒𝓌</a>
             </div>
         </div>
     </div>
     <h1>Welcome to Poems!</h1>
     <p>This has been updated from Manuscripts to Poems. I write them, now you get a chance to see my best!</p>
-    <h4>To Know Is Not To Believe</h4>
-    <p>It may be a truth</p>
-    <p>Or it may not</p>
-    <p>But what I have to say</p>
-    <p>Makes it truthful</p>
-    <p>You know, don't you?</p>
-    <p>But the real question is: do you believe?</p>
-    <p>Maybe you do</p>
-    <p>Maybe you don't</p>
-    <p>But what I have to say</p>
-    <p>Makes the answer yes</p>
     <div>
-    <h4>Calculator</h4>
-    <p>I envy</p>
-    <p>you</p>
-    <p>you</p>
-    <p>calculator</p>
-    <p>you</p>
-    <p>know everything</p>
-    <p>about math</p>
-    <p>When</p>
-    <p>I</p>
-    <p>don't</p>
-    <p>I will</p>
-    <p>make</p>
-    <p>arrangements</p>
-    <p>to (yes I will)</p>
-    <p>incorporate</p>
-    <p>you</p>
-    <p>in</p>
-    <p>my</p>
-    <p>head</p>
+        <button id="myBtn">To Know Is Not To Believe</button>
+        <div id="poem" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>To Know Is Not To Believe</h1>
+                <p>It may be a truth</p>
+                <p>Or it may not</p>
+                <p>But what I have to say</p>
+                <p>Makes it truthful</p>
+                <p>You know, don't you?</p>
+                <p>But the real question is: do you believe?</p>
+                <p>Maybe you do</p>
+                <p>Maybe you don't</p>
+                <p>But what I have to say</p>
+                <p>Makes the answer yes</p>
+                <img src="img/tkintb.png"></img>
+            </div>
+        </div>
+        <button id="myBtn">Calculator</button>
+        <div id="poem" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>Calculator</h1>
+                <p>I envy</p>
+                <p>you</p>
+                <p>you</p>
+                <p>calculator</p>
+                <p>you</p>
+                <p>know everything</p>
+                <p>about math</p>
+                <p>When</p>
+                <p>I</p>
+                <p>don't</p>
+                <p>I will</p>
+                <p>make</p>
+                <p>arrangements</p>
+                <p>to (yes I will)</p>
+                <p>incorporate</p>
+                <p>you</p>
+                <p>in</p>
+                <p>my</p>
+                <p>head</p>
+                <img src="img/calc.png"></img>
+            </div>
+        </div>
     </div>
-    <!-- <div>
-        <embed src="doc/blueplanet.pdf" type="application/pdf"   height="700px" width="500">
-        <p>I wrote this for a young writers contest.</p>
-    </div> -->
-    <!-- <div>
-        <img src="img/uc.png"></img>
-    </div>  -->
-</div>
 </body>
-</html>
 
+</html>

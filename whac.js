@@ -6,6 +6,7 @@ const timeText = document.getElementById("time");
 const score = document.getElementById("score");
 const selectedMole = document.getElementById("selected-mole")
 const tick = new Audio('snd/ticktock.mp3');
+
 let timer;
 let moleTimer;
 let currentTime = 30;
@@ -29,6 +30,7 @@ function countDown() {
     currentTime--;
     timeText.textContent = currentTime;
     tick.play();
+    playbackRate(1)
     if (currentTime === 0 ){
         clearInterval(timer);
         clearInterval(moleTimer);

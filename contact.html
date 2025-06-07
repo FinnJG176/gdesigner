@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gdesigner:GoGuesser</title>
-
+    <title>gdesigner:Contact Us!</title>
     <style>
         body {
             background-image: linear-gradient(to left, salmon, chartreuse);
@@ -33,6 +32,7 @@
         }
 
         .dropbtn {
+
             background-color: chartreuse;
             color: black;
             padding: 20px 20px;
@@ -63,6 +63,7 @@
             display: block
         }
 
+        /* Change color of dropdown links on hover */
         .dropdown-content a:hover {
             background-color: rgb(205, 112, 112);
         }
@@ -76,21 +77,49 @@
         .dropdown:hover .dropbtn {
             background-color: gainsboro;
         }
+
+        h1 {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        input {
+            background-color: lightblue;
+            width: 70%;
+            margin-left: 12%;
+            font-size: 20px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+
+        }
+
+        textarea {
+            background-color: lightblue;
+            width: 70%;
+            margin-left: 12%;
+            font-size: 20px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        #butt0n {
+            background-image: linear-gradient(to left, salmon, chartreuse);
+            margin: auto;
+            display: flex;
+            font-size: 20px;
+            padding: 12px;
+            border-radius: 10px;
+            width: 20%;
+            text-align: center;
+            justify-content: center;
+        }
+        
     </style>
 </head>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/67fbbb874ccc74190ae60f35/1ionl9215';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+
 <body>
     <div class="header">
         <a href="index.html"><img class="logodisplay" src="img/HomeIcon.png"></img></a>
@@ -100,38 +129,27 @@
                 <a href="videos.html">Videos</a>
                 <a href="photos.html">Photos</a>
                 <a href="cprojs.html">Coding Projects ᗷETᗩ</a>
-                <a href="poems.html">Poems</a>
+                <a href="poems.html">Poems 𝒩𝑒𝓌</a>
                 <a href="tkdfeats1.html">TKD Feats</a>
-                <a href="aero.html">Aeronautics ᗷETᗩ</a>
+                <a href="goguesser.html">GoGuesser</a>
                 <a href="whac.html">Whac-a-Mole ᗷETᗩ</a>
-                <a href="hp2.html">Hand Picked Produce</a>
-                <a href="contact.html">Contact Us 𝒩𝑒𝓌</a>  
             </div>
         </div>
     </div>
-    <h1>GoGuesser</h1>
-    <p>This is a number guessing game that I created. Another version can be found at <a
-            href="https://replit.com/@FinnJG/GoGuesser-The-number-guessing-game">this link</a>.</p>
-    <label for="difficulty">Choose a difficulty:</label>
-    <select name="difficulty" id="difficulty">
-        <option value="easiest">Easiest (1-10, 10 tries)</option>
-        <option value="easy">Easy (1-50, 15 tries)</option>
-        <option value="inter">Intermediate (1-100, 25 tries)</option>
-        <option value="hard">Hard (1-500, 30 tries)</option>
-        <option value="expert">Expert (1-1000, 50 tries)</option>
-        <option value="impos">Impossible (1-2000, 55 tries)</option>
-    </select>
-      
+
     <div>
-        <p>Guess the Number:</p>
-        <input id="guessInput" type="number" placeholder="GoGuess here...">
-        <button id="guessButton">Submit</button>
-        <p id="feedback"></p>
-        <p id="tries"></p>
-
+        <h1>Contact Forum</h1>
+        <form target="_blank" action="https://formsubmit.co/finnegan.granholm@gmail.com" method="POST">
+            <input type="text" name="first" placeholder="First Name" required></input>
+            <input type="text" name="last" placeholder="Last Name" required></input>
+            <input type="email" name="email" placeholder="Email Adress" required></input>
+            <textarea name="message" cols="60" rows="15"
+                placeholder="Ask a question, or report an error, or something else!" font-family="Arial"
+                required></textarea>
+            <button id="butt0n"type="submit">Submit</button>
+        </form>
     </div>
-    <script src="goguesser.js"></script>
-
+    </div>
 </body>
 
 </html>
