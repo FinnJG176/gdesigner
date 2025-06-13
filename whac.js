@@ -5,7 +5,7 @@ const start = document.getElementById("start");
 const timeText = document.getElementById("time");
 const score = document.getElementById("score");
 const selectedMole = document.getElementById("selected-mole")
-const tick = new Audio('snd/ticktock.mp3');
+const tick = document.getElementById("tick-audio")
 
 let timer;
 let moleTimer;
@@ -24,17 +24,20 @@ function startGame() {
     timer = setInterval(countDown, 1000);
     moleTimer = setInterval(showMole, 1500);
 
+    tick.currentTime = 0;
+    tick.play();
 }
 
 function countDown() {
     currentTime--;
     timeText.textContent = currentTime;
-    tick.play();
-    playbackRate(1)
-    if (currentTime === 0 ){
+    // tick.play();
+    // playbackRate(2)
+    if (currentTime === 0) {
+        console.log("current time 0")
         clearInterval(timer);
-        clearInterval(moleTimer);
-        // add prnt score
+        clearInterval(moleTimer); 
+        tick.pause();
     }
 
 }
@@ -62,11 +65,9 @@ holes.forEach(hole => {
     hole.addEventListener('click', (event) => {
     // check if the hole clicked on has show in the classlist
     // this means theres a mole in the hole
-        console.log("click")
         const clicked = event.target;
         if (clicked.classList.contains('mole')) {
             currentScore++;
-            console.log("currentScore", currentScore)
             score.textContent = currentScore;
             clicked.remove()
         }
